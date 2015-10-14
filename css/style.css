@@ -1,8 +1,30 @@
-<html>
-	<head>
-		<title>Jaime Flores</title
-		<link rel="style" href="css/style.css" />
-	</head>
-	<body>
-	</body>
-</html>
+html, body{
+	background-color: #fff;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+
+header{
+	height: 150px;
+	margin-left: 5%;
+	margin-top: 10px;
+	width: 90%;
+}
+header .photo {
+	border-radius: 50%;
+	float: left;
+	width: 100px;
+}
+header .profile{
+	float: right;
+	height: 100%;
+	width: calc(100% - 100px);
+}
+header label{
+	display: block;
+}
+header .name{
+}
