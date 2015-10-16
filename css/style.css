@@ -1,100 +1,68 @@
-html, body{
-	background-color: #fff;
-	height: 100%;
-	font-family: verdana;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+html,
+body { background-color: #fff; height: 100%; font-family: verdana; margin: 0; padding: 0; text-align: center; width: 100%; }
+header { height: 150px; margin-left: 5%; margin-top: 10px; text-align: center; width: 90%; }
+header .photo { border-radius: 50%; width: 100px; }
+header .profile { margin-top: 10px; }
+header label { display: block; transition: color 200ms linear; }
+header label:hover { color: #888; }
+header .name { font-size: 20pt; font-weight: bold; }
+header .desc { font-size: 12pt; font-style: italic; }
+header .twitter:link { color: #0ff; font-size: 12pt; }
+header ul { list-style: none; }
+header ul>li { border: 1px solid black; border-radius: 3px; cursor: pointer; display: inline-block; padding: 5px 10px 5px 10px; transition: background-color 100ms linear, color 100ms linear; }
+header ul>li.selected,
+header ul>li:hover { background-color: black; color: white; }
+
+.content {
+	background-color: #888;
+	border: 1px solid #888;
+	border-radius: 10px;
+	left: calc(50% - 400px);
+	width: 800px;
+	position: absolute;
+	top: 270px;
+}
+.content table{
+	color: #fff;
 	width: 100%;
 }
-
-header{
-	height: 150px;
-	margin-left: 5%;
-	margin-top: 10px;
-	text-align: center;
-	width: 90%;
+.content table th,
+.content table td{
+	width: 50%;
+	padding: 5px 10px 5px 10px;
 }
-header .photo{
-	border-radius: 50%;
-	width: 100px;
+.content table th{
+	text-align: right;
 }
-header .profile{
-	height: 100%;
-	margin-top: 10px;
+.content table td{
+	text-align: left;
 }
-header label{
-	display: block;
-	transition: color 200ms linear;
-}
-header label:hover{
-	color: #888;
-}
-header .name{
-	font-size: 20pt;
-	font-weight: bold;
-}
-header .desc{
-	font-size: 12pt;
-	font-style: italic;
-}
-header .twitter:link{
-	color: #0ff;
-	font-size: 12pt;
-}
-
-
-
 
 .shake,
-.shake-hover:hover
-    {
-        cursor: pointer;
-
-        transform-origin:50% 50%;
-        -ms-transform-origin:50% 50%;
-        -webkit-transform-origin:50% 50%;
-
-        animation-name: shakering;
-	    animation-duration: 1.2s;
-	    animation-iteration-count: infinite;
-	    animation-timing-function: linear;    
-    
-        -ms-animation-name: shakering;
-	    -ms-animation-duration: 1.2s;
-	    -ms-animation-iteration-count: infinite;
-	    -ms-animation-timing-function: linear;    
-
-        -webkit-animation-name: shakering;
-	    -webkit-animation-duration: 1.2s;
-	    -webkit-animation-iteration-count: infinite;
-	    -webkit-animation-timing-function: linear;    
-    }
-
-    @keyframes shakering {
-	    0% {  transform: translate(2px, 1px) rotate(0deg); }
-	    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-	    20% { transform: translate(-3px, 0px) rotate(1deg); }
-	    30% { transform: translate(0px, 2px) rotate(0deg); }
-	    40% { transform: translate(1px, -1px) rotate(1deg); }
-	    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-	    60% { transform: translate(-3px, 1px) rotate(0deg); }
-	    70% { transform: translate(2px, 1px) rotate(-1deg); }
-	    80% { transform: translate(-1px, -1px) rotate(1deg); }
-	    90% { transform: translate(2px, 2px) rotate(0deg); }
-	    100% { transform: translate(1px, -2px) rotate(-1deg); }
-    }
-
-    @-webkit-keyframes shakering {
-	    0% {   -webkit-transform: translate(2px, 1px) rotate(0deg); }
-	    10% {  -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
-	    20% {  -webkit-transform: translate(-3px, 0px) rotate(1deg); }
-	    30% {  -webkit-transform: translate(0px, 2px) rotate(0deg); }
-	    40% {  -webkit-transform: translate(1px, -1px) rotate(1deg); }
-	    50% {  -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
-	    60% {  -webkit-transform: translate(-3px, 1px) rotate(0deg); }
-	    70% {  -webkit-transform: translate(2px, 1px) rotate(-1deg); }
-	    80% {  -webkit-transform: translate(-1px, -1px) rotate(1deg); }
-	    90% {  -webkit-transform: translate(2px, 2px) rotate(0deg); }
-	    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
-    }
+.shake-hover:hover { cursor: pointer; transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; -webkit-transform-origin: 50% 50%; animation-name: shakering; animation-duration: 1.2s; animation-iteration-count: infinite; animation-timing-function: linear; -ms-animation-name: shakering; -ms-animation-duration: 1.2s; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; -webkit-animation-name: shakering; -webkit-animation-duration: 1.2s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; }
+@keyframes shakering {
+	0% { transform: translate(2px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(0px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(2px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(2px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@-webkit-keyframes shakering {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
