@@ -9,35 +9,24 @@ header .name { font-size: 20pt; font-weight: bold; }
 header .desc { font-size: 12pt; font-style: italic; }
 header .twitter:link { color: #0ff; font-size: 12pt; }
 header ul { list-style: none; }
-header ul>li { border: 1px solid black; border-radius: 3px; cursor: pointer; display: inline-block; padding: 5px 10px 5px 10px; transition: background-color 100ms linear, color 100ms linear; }
+header ul>li { color: #fff; border-radius: 3px; cursor: pointer; display: inline-block; padding: 5px 10px 5px 10px; transition: background-color 100ms linear, color 100ms linear; }
 header ul>li.selected,
-header ul>li:hover { background-color: black; color: white; }
+header ul>li:hover { background-color: #fff !important; }
 
-.content {
-	background-color: #888;
-	border: 1px solid #888;
-	border-radius: 10px;
-	left: calc(50% - 400px);
-	width: 800px;
-	position: absolute;
-	top: 270px;
-}
-.content table{
-	color: #fff;
-	width: 100%;
-}
+#btn-professional { border: 1px solid #f00; background-color: #f00 }
+#btn-personal { border: 1px solid #888; background-color: #888 }
+
+#btn-professional:hover { color: #f00 }
+#btn-personal:hover { color: #888 }
+
+#professional { background-color: #f00; }
+.content { left: calc(50% - 400px); background-color: #888; border-radius: 10px; width: 800px; position: absolute; top: 270px; transition: left 500ms ease; z-index: 1; }
+.content.hide { left: -790px; z-index: 0; }
+.content table { color: #fff; width: 100%; }
 .content table th,
-.content table td{
-	width: 50%;
-	padding: 5px 10px 5px 10px;
-}
-.content table th{
-	text-align: right;
-}
-.content table td{
-	text-align: left;
-}
-
+.content table td { width: 50%; padding: 5px 10px 5px 10px; }
+.content table th { text-align: right; }
+.content table td { text-align: left; }
 .shake,
 .shake-hover:hover { cursor: pointer; transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; -webkit-transform-origin: 50% 50%; animation-name: shakering; animation-duration: 1.2s; animation-iteration-count: infinite; animation-timing-function: linear; -ms-animation-name: shakering; -ms-animation-duration: 1.2s; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; -webkit-animation-name: shakering; -webkit-animation-duration: 1.2s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; }
 @keyframes shakering {

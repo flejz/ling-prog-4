@@ -6,20 +6,20 @@
 	<body>
 	
 		<header>
-			<img class="photo shake-hover" src="img/perfil.jpg" <br/>
+			<img class="photo shake" src="img/perfil.jpg" <br/>
 			<div class="profile">
-				<label class="name">JAIME FLORES</label>
-				<label class="desc">Software Developer</label>
-				<label class="twitter">
+				<label class="name shake-hover">JAIME FLORES</label>
+				<label class="desc shake-hover">Software Developer</label>
+				<label class="twitter shake-hover">
 					<a href="http://twitter.com/jdevbr" target="_blank"><img src="img/twitter.png"> @jDevBR</a>
 				</label>
 			</div>
 			<ul>
-				<li>Pessoal</li>
-				<li>Profissional</li>
+				<li id="btn-personal">Pessoal</li>
+				<li id="btn-professional">Profissional</li>
 			</ul>
 		</header>
-		<div id="personal" class="content">
+		<div id="personal" class="content show">
 			<table>
 				<tr>
 					<th>IDADE</th>
@@ -35,7 +35,7 @@
 				</tr>
 				<tr>
 					<th>ESPORTES</th>
-					<td>Basket, Rugby, Boxe</td>
+				<td>Basket, Rugby, Boxe</td>
 				</tr>
 				<tr>
 					<th>PAIXOES</th>
@@ -44,9 +44,48 @@
 			</table>
 		</div>
 
-		<div id="professional" class="content">
+		<div id="professional" class="content hide">
+			<table>
+				<tr>
+					<th>PROFISSAO</th>
+					<td>Desenvolvedor</td>
+				</tr>
+				<tr>
+					<th>CAPACIDADES</th>
+					<td>Web, Desk, Mobal ...</td>
+				</tr>
+				<tr>
+					<th>XP</th>
+					<td>8 anos</td>
+				</tr>
+				<tr>
+					<th>METAS</th>
+					<td>Google, Valve, CD Project Red</td>
+				</tr>
+				<tr>
+					<th>LIVROS</th>
+					<td>JS: Good Parts, How to be a software evangelis</td>
+				</tr>
+			</table>
 			
 		</div>
 	
+		<script type="text/javascript">
+			function _get(id){
+				return document.getElementById(id);
+			}
+
+			_get('btn-personal').onclick = function(){
+
+				_get('personal').classList.remove('hide');
+				_get('professional').classList.add('hide');
+			}
+			_get('btn-professional').onclick = function(){
+
+				_get('personal').classList.add('hide');
+				_get('professional').classList.remove('hide');
+			}
+		</script>
+
 	</body>
 </html>
